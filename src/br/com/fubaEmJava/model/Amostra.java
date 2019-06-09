@@ -3,12 +3,12 @@ package br.com.fubaEmJava.model;
 public class Amostra {
 	protected long idAmostra;
 	protected int dsQuantidade;
-	protected int idTipoDeAmostra;
-	protected int idProduto;
-	protected int idArmazem;
+	protected long idTipoDeAmostra;
+	protected long idProduto;
+	protected long idArmazem;
 	protected String dataDaColeta;
 	protected String nomeDoInspetor;
-	protected int idTipoDeOperacao;
+	protected long idTipoDeOperacao;
 	
 	public long getIdAmostra() {
 		return idAmostra;
@@ -22,19 +22,19 @@ public class Amostra {
 	public void setDsQuantidade(int dsQuantidade) {
 		this.dsQuantidade = dsQuantidade;
 	}
-	public int getIdTipoDeAmostra() {
+	public long getIdTipoDeAmostra() {
 		return idTipoDeAmostra;
 	}
 	public void setIdTipoDeAmostra(int idTipoDeAmostra) {
 		this.idTipoDeAmostra = idTipoDeAmostra;
 	}
-	public int getIdProduto() {
+	public long getIdProduto() {
 		return idProduto;
 	}
 	public void setIdProduto(int idProduto) {
 		this.idProduto = idProduto;
 	}
-	public int getIdArmazem() {
+	public long getIdArmazem() {
 		return idArmazem;
 	}
 	public void setIdArmazem(int idArmazem) {
@@ -52,7 +52,7 @@ public class Amostra {
 	public void setNomeDoInspetor(String nomeDoInspetor) {
 		this.nomeDoInspetor = nomeDoInspetor;
 	}
-	public int getIdTipoDeOperacao() {
+	public long getIdTipoDeOperacao() {
 		return idTipoDeOperacao;
 	}
 	public void setIdTipoDeOperacao(int idTipoDeOperacao) {
