@@ -7,8 +7,8 @@ public class Produto {
 	public long getIdProduto() {
 		return idProduto;
 	}
-	public void setIdProduto(int idProduto) {
-		this.idProduto = idProduto;
+	public void setIdProduto(long l) {
+		this.idProduto = l;
 	}
 	public String getDsProduto() {
 		return dsProduto;
