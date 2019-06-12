@@ -7,8 +7,8 @@ public class TipoDeAmostra {
 	public long getIdTipoDeAmostra() {
 		return idTipoDeAmostra;
 	}
-	public void setIdTipoDeAmostra(int idTipoDeAmostra) {
-		this.idTipoDeAmostra = idTipoDeAmostra;
+	public void setIdTipoDeAmostra(long l) {
+		this.idTipoDeAmostra = l;
 	}
 	public String getDsTipoDeAmostra() {
 		return dsTipoDeAmostra;

@@ -5,8 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class HerokuConnectionFactory {
-	public Connection getConnection() {
-		try {
+	/*
+	 public Connection getConnection() {
+	 	try {
 			String urlDoBd = "jdbc:postgresql:fuba";
 			String user = "eclipse";
 			String password = "407186";
@@ -15,4 +16,5 @@ public class HerokuConnectionFactory {
 			throw new RuntimeException(e);
 		}
 	}
+	*/
 }
