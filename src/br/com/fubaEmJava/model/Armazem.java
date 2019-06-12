@@ -7,8 +7,8 @@ public class Armazem {
 	public long getIdArmazem() {
 		return idArmazem;
 	}
-	public void setIdArmazem(int idArmazem) {
-		this.idArmazem = idArmazem;
+	public void setIdArmazem(long l) {
+		this.idArmazem = l;
 	}
 	public String getDsArmazem() {
 		return dsArmazem;
