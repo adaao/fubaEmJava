@@ -4,17 +4,17 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.fubaEmJava.model.TipoDeAmostra;
 
 public class TipoDeAmostraDao {
 	private Connection connection;
 	private PreparedStatement stmt;
-	private String mnsg;
-	
+		
 	public TipoDeAmostraDao() {
 		this.connection = ConnectionFactory.getConnection();
-		mnsg = "Nao implementado\n";
 	}
 	
 	public void adicionaTipoDeAmostra(TipoDeAmostra novoTipoDeAmostra) {
@@ -53,10 +53,24 @@ public class TipoDeAmostraDao {
 		}
 	}
 	
-	public TipoDeAmostra buscaTipoDeAmostra(int idTipoDeAmostra) {
-		TipoDeAmostra tpa = new TipoDeAmostra();
-		System.out.println(mnsg);
-		return tpa;
+	public List<TipoDeAmostra> listaTiposDeAmostra() {
+		try {
+			List<TipoDeAmostra> tipos = new ArrayList<TipoDeAmostra>();
+			String sql = "SELECT * FROM tipoDeAmostra";
+			PreparedStatement stmt = this.connection.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()) {
+				tipos.add(
+						tipoDeAmostraFactoryFromResultSet(rs)
+				);
+			}
+			rs.close();
+			stmt.close();
+			return tipos;
+		}catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 	}
 	
 	private TipoDeAmostra tipoDeAmostraFactoryFromResultSet(ResultSet rs) 

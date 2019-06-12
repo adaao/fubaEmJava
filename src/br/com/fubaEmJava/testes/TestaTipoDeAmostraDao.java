@@ -1,5 +1,7 @@
 package br.com.fubaEmJava.testes;
 
+import java.util.List;
+
 import br.com.fubaEmJava.model.TipoDeAmostra;
 import br.com.fubaEmJava.model.dao.TipoDeAmostraDao;
 
@@ -9,7 +11,8 @@ public class TestaTipoDeAmostraDao {
 	
 	public static void main(String[] args) {
 		//insereTipoDeAmostra();
-		alteraTipoDeAmostra();
+		//alteraTipoDeAmostra();
+		lista();
 		
 		
 	}
@@ -23,5 +26,15 @@ public class TestaTipoDeAmostraDao {
 		ta.setDsTipoDeAmostra("nova descricao do teste");
 		ta.setIdTipoDeAmostra(1);
 		tpad.alteraTipoDeAmostra(ta);
+	}
+	
+	public static void lista() {
+		List<TipoDeAmostra> tipos = tpad.listaTiposDeAmostra();
+		System.out.println("========== Tipos de amostra cadastrados ==========");
+		for(TipoDeAmostra t : tipos) {
+			System.out.println("id: " + t.getIdTipoDeAmostra());
+			System.out.println("descrição: " + t.getDsTipoDeAmostra());
+			System.out.println("==================================================");
+		}
 	}
 }
