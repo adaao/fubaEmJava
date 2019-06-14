@@ -4,7 +4,7 @@ CREATE TABLE fuba.amostras (
    id_tipoDeAmostra INT,
    id_produto INT,
    id_armazem INT,
-   dt_dataDaColeta TIMESTAMP,
+   dt_dataDaColeta TIMESTAMP timestamp without time zone NOT NULL DEFAULT CURRENT_TIMESTAMP,
    ds_nomeDoInspetor VARCHAR(255),
    id_tipoDeOperacao INT
 );
