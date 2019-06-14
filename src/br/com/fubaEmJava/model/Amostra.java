@@ -1,12 +1,14 @@
 package br.com.fubaEmJava.model;
 
+import java.sql.Timestamp;
+
 public class Amostra {
 	protected long idAmostra;
 	protected int dsQuantidade;
 	protected long idTipoDeAmostra;
 	protected long idProduto;
 	protected long idArmazem;
-	protected String dataDaColeta;
+	protected Timestamp dataDaColeta;
 	protected String nomeDoInspetor;
 	protected long idTipoDeOperacao;
 	
@@ -25,26 +27,26 @@ public class Amostra {
 	public long getIdTipoDeAmostra() {
 		return idTipoDeAmostra;
 	}
-	public void setIdTipoDeAmostra(int idTipoDeAmostra) {
-		this.idTipoDeAmostra = idTipoDeAmostra;
+	public void setIdTipoDeAmostra(long l) {
+		this.idTipoDeAmostra = l;
 	}
 	public long getIdProduto() {
 		return idProduto;
 	}
-	public void setIdProduto(int idProduto) {
-		this.idProduto = idProduto;
+	public void setIdProduto(long l) {
+		this.idProduto = l;
 	}
 	public long getIdArmazem() {
 		return idArmazem;
 	}
-	public void setIdArmazem(int idArmazem) {
-		this.idArmazem = idArmazem;
+	public void setIdArmazem(long l) {
+		this.idArmazem = l;
 	}
-	public String getDataDaColeta() {
+	public Timestamp getDataDaColeta() {
 		return dataDaColeta;
 	}
-	public void setDataDaColeta(String dataDaColeta) {
-		this.dataDaColeta = dataDaColeta;
+	public void setDataDaColeta(Timestamp data) {
+		this.dataDaColeta = data;
 	}
 	public String getNomeDoInspetor() {
 		return nomeDoInspetor;

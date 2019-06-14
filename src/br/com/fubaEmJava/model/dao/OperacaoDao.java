@@ -39,7 +39,7 @@ public class OperacaoDao {
 	public void alteraOperacao(Operacao tpDAmstra) {
 		String sql = "UPDATE operacoes SET "
 				   + "ds_operacao = ? "
-				   + "WHERE id_operacao = ?";
+				   + "WHERE id_tipodeoperacao = ?";
 		
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -76,7 +76,7 @@ public class OperacaoDao {
 	private Operacao operacaoFactoryFromResultSet(ResultSet rs) 
 	throws SQLException{
 		Operacao tpa = new Operacao();
-		tpa.setIdTipoDeOperacao(rs.getLong("id_operacao"));
+		tpa.setIdTipoDeOperacao(rs.getLong("id_tipodeoperacao"));
 		tpa.setDsOperacao(rs.getString("ds_operacao"));
 		
 		return tpa;
