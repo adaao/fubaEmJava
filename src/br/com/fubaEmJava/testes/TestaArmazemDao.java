@@ -29,7 +29,7 @@ public class TestaArmazemDao {
 	}
 	
 	public static void lista() {
-		List<Armazem> tipos = tpad.listaTiposDeAmostra();
+		List<Armazem> tipos = tpad.listaArmazens();
 		System.out.println("========== Tipos de armazem cadastrados ==========");
 		for(Armazem t : tipos) {
 			System.out.println("id: " + t.getIdArmazem());

@@ -53,7 +53,7 @@ public class ProdutoDao {
 		}
 	}
 	
-	public List<Produto> listaTiposDeAmostra() {
+	public List<Produto> listaProdutos() {
 		try {
 			List<Produto> tipos = new ArrayList<Produto>();
 			String sql = "SELECT * FROM produtos";

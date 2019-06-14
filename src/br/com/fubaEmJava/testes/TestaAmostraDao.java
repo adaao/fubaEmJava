@@ -44,6 +44,7 @@ public class TestaAmostraDao {
 		System.out.println("============== amostras registradas =======================");
 		for(Amostra a : amostras) {
 			System.out.println("id amstra: " + a.getIdAmostra());
+			System.out.println("lacre: " + a.getLacre());
 			System.out.println("qntdde: " + a.getDsQuantidade());
 			System.out.println("armazem: " + a.getIdArmazem());
 			System.out.println("produto: " + a.getIdProduto());

@@ -11,6 +11,7 @@ public class Amostra {
 	protected Timestamp dataDaColeta;
 	protected String nomeDoInspetor;
 	protected long idTipoDeOperacao;
+	protected String lacre;
 	
 	public long getIdAmostra() {
 		return idAmostra;
@@ -20,6 +21,15 @@ public class Amostra {
 	}
 	public int getDsQuantidade() {
 		return dsQuantidade;
+	}
+	public String getLacre() {
+		return lacre;
+	}
+	public void setLacre(String lacre) {
+		this.lacre = lacre;
+	}
+	public void setIdTipoDeOperacao(long idTipoDeOperacao) {
+		this.idTipoDeOperacao = idTipoDeOperacao;
 	}
 	public void setDsQuantidade(int dsQuantidade) {
 		this.dsQuantidade = dsQuantidade;

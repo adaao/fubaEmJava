@@ -53,7 +53,7 @@ public class OperacaoDao {
 		}
 	}
 	
-	public List<Operacao> listaTiposDeAmostra() {
+	public List<Operacao> listaOperacoes() {
 		try {
 			List<Operacao> tipos = new ArrayList<Operacao>();
 			String sql = "SELECT * FROM operacoes";

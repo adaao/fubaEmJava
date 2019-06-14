@@ -29,7 +29,7 @@ public class TestaProdutoDao {
 	}
 	
 	public static void lista() {
-		List<Produto> tipos = tpad.listaTiposDeAmostra();
+		List<Produto> tipos = tpad.listaProdutos();
 		System.out.println("========== Tipos de produto cadastrados ==========");
 		for(Produto t : tipos) {
 			System.out.println("id: " + t.getIdProduto());

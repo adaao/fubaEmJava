@@ -29,7 +29,7 @@ public class TestaOperacaoDao {
 	}
 	
 	public static void lista() {
-		List<Operacao> tipos = tpad.listaTiposDeAmostra();
+		List<Operacao> tipos = tpad.listaOperacoes();
 		System.out.println("========== Tipos de operacao cadastrados ==========");
 		for(Operacao t : tipos) {
 			System.out.println("id: " + t.getIdTipoDeOperacao());

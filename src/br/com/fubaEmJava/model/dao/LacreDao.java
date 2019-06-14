@@ -54,7 +54,7 @@ public class LacreDao {
 		}
 	}
 	
-	public List<Lacre> listaTiposDeAmostra() {
+	public List<Lacre> listaLacres() {
 		try {
 			List<Lacre> tipos = new ArrayList<Lacre>();
 			String sql = "SELECT * FROM lacres";

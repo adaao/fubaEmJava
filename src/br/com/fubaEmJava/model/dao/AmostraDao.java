@@ -22,9 +22,9 @@ public class AmostraDao {
 	
 	public void adicionaAmostraFull(Amostra amostra) {
 		String sql = "INSERT INTO amostras "
-				   + "(ds_quantidade, id_tipodeamostra, id_produto, id_armazem, date, ds_nomedoinspetor, id_tipodeoperacao) "
+				   + "(ds_quantidade, id_tipodeamostra, id_produto, id_armazem, date, ds_nomedoinspetor, id_tipodeoperacao, ds_lacre) "
 				   + "VALUES "
-				   + "(?,?,?,?,?,?,?) ";
+				   + "(?,?,?,?,?,?,?,?) ";
 		
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -37,6 +37,7 @@ public class AmostraDao {
 		    stmt.setTimestamp(5, amostra.getDataDaColeta());
 			stmt.setString(6, amostra.getNomeDoInspetor());
 			stmt.setLong(7, amostra.getIdTipoDeOperacao());
+			stmt.setString(8, amostra.getLacre());
 			
 			stmt.execute();
 			stmt.close();
@@ -49,9 +50,9 @@ public class AmostraDao {
 	
 	public void adicionaAmostra(Amostra amostra) {
 		String sql = "INSERT INTO amostras "
-				   + "(ds_quantidade, id_tipodeamostra, id_produto, id_armazem, ds_nomedoinspetor, id_tipodeoperacao) "
+				   + "(ds_quantidade, id_tipodeamostra, id_produto, id_armazem, ds_nomedoinspetor, id_tipodeoperacao, ds_lacre) "
 				   + "VALUES "
-				   + "(?,?,?,?,?,?) ";
+				   + "(?,?,?,?,?,?,?) ";
 		
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -61,6 +62,7 @@ public class AmostraDao {
 			stmt.setLong(4, amostra.getIdArmazem());
 			stmt.setString(5, amostra.getNomeDoInspetor());
 			stmt.setLong(6, amostra.getIdTipoDeOperacao());
+			stmt.setString(7, amostra.getLacre());
 			
 			stmt.execute();
 			stmt.close();
@@ -78,7 +80,8 @@ public class AmostraDao {
 				   + "id_armazem = ?, "
 				   //+ "dt_datadacoleta = ?, "
 				   + "ds_nomedoinspetor = ?, "
-				   + "id_tipodeoperacao = ? "
+				   + "id_tipodeoperacao = ?, "
+				   + "ds_lacre = ? "
 				   + "WHERE id_amostra = ? ";
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -89,7 +92,8 @@ public class AmostraDao {
 			//stmt.setDate(5, amostra.getDataDaColeta());
 			stmt.setString(5, amostra.getNomeDoInspetor());
 			stmt.setLong(6, amostra.getIdTipoDeOperacao());
-			stmt.setLong(7, amostra.getIdAmostra());
+			stmt.setString(7, amostra.getLacre());
+			stmt.setLong(8, amostra.getIdAmostra());
 			
 			stmt.execute();
 			stmt.close();
@@ -131,6 +135,7 @@ public class AmostraDao {
 		//Timestamp data = Calendar.getInstance();
 		a.setDataDaColeta(rs.getTimestamp("dt_datadacoleta"));
 		a.setNomeDoInspetor(rs.getString("ds_nomedoinspetor"));
+		a.setLacre(rs.getString("ds_lacre"));
 		
 		return a;
 	}

@@ -30,7 +30,7 @@ public class TestaLacreDao {
 	}
 	
 	public static void lista() {
-		List<Lacre> lacres = tpad.listaTiposDeAmostra();
+		List<Lacre> lacres = tpad.listaLacres();
 		System.out.println("========== Tipos de lacre cadastrados ==========");
 		for(Lacre l : lacres) {
 			System.out.println("id da amostra: " + l.getIdAmostra());
